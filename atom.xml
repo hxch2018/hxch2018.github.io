@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>hxch的博客</title>
+  <title>hxch</title>
   
-  <subtitle>万般都是命，半点不由人！</subtitle>
+  <subtitle>万般皆是命，半点不由人！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
