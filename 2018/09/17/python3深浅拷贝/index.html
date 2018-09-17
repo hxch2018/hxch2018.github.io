@@ -125,16 +125,17 @@
 
 
 
-<meta name="description" content="hxch个人站，学习、生活、精进">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hxch">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="python3中的赋值与拷贝操作 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python3">
+<meta property="og:url" content="http://yoursite.com/2018/09/17/python3深浅拷贝/index.html">
 <meta property="og:site_name" content="hxch">
-<meta property="og:description" content="hxch个人站，学习、生活、精进">
+<meta property="og:description" content="python3中的赋值与拷贝操作 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-17T05:35:41.664Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hxch">
-<meta name="twitter:description" content="hxch个人站，学习、生活、精进">
+<meta name="twitter:title" content="python3">
+<meta name="twitter:description" content="python3中的赋值与拷贝操作 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
 
 
 
@@ -164,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/17/python3深浅拷贝/"/>
 
 
 
 
 
-  <title>hxch</title>
+  <title>python3 | hxch</title>
   
 
 
@@ -189,8 +190,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,9 +293,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -325,9 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/17/python3深浅拷贝/" itemprop="url">python3</a></h1>
+          <h1 class="post-title" itemprop="name headline">python3</h1>
         
 
         <div class="post-meta">
@@ -359,6 +357,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -408,9 +411,7 @@
       
 
       
-        
-          
-            <p>python3中的赋值与拷贝操作</p>
+        <p>python3中的赋值与拷贝操作</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line">In [43]: l = [1, 2, [3, 4], 5]</span><br><span class="line"></span><br><span class="line">In [44]: l1 = l</span><br><span class="line"></span><br><span class="line">In [45]: import copy</span><br><span class="line"></span><br><span class="line"># python3中列表支持copy方法</span><br><span class="line">In [50]: l2 = l.copy()</span><br><span class="line"></span><br><span class="line">In [51]: l3 = copy.copy(l)</span><br><span class="line"></span><br><span class="line">In [52]: l4 = copy.deepcopy(l)</span><br><span class="line"></span><br><span class="line"># 查看对象的内存地址</span><br><span class="line">In [64]: id(l)</span><br><span class="line">Out[64]: 4358318408</span><br><span class="line"># 赋值操作的结果与原列表指向同一块内存地址</span><br><span class="line">In [65]: id(l1)</span><br><span class="line">Out[65]: 4358318408</span><br><span class="line"># 列表的copy方法创建了一个新的对象</span><br><span class="line">In [66]: id(l2)</span><br><span class="line">Out[66]: 4354839432</span><br><span class="line"># copy函数创建了一个新的对象</span><br><span class="line">In [67]: id(l3)</span><br><span class="line">Out[67]: 4355813576</span><br><span class="line"># deepcopy函数同样创建了一个新的对象</span><br><span class="line">In [68]: id(l4)</span><br><span class="line">Out[68]: 4355813768</span><br><span class="line"></span><br><span class="line"># 查看不可变元素的内存地址</span><br><span class="line"># 与python2不同，不管是列表的copy方法，还是copy模块的copy或者deepcopy方法</span><br><span class="line"># 不可变元素都指向同一块内存地址</span><br><span class="line">In [74]: id(l[0])</span><br><span class="line">Out[74]: 4321480048</span><br><span class="line"></span><br><span class="line">In [75]: id(l1[0])</span><br><span class="line">Out[75]: 4321480048</span><br><span class="line"></span><br><span class="line">In [76]: id(l2[0])</span><br><span class="line">Out[76]: 4321480048</span><br><span class="line"></span><br><span class="line">In [77]: id(l3[0])</span><br><span class="line">Out[77]: 4321480048</span><br><span class="line"></span><br><span class="line">In [78]: id(l4[0])</span><br><span class="line">Out[78]: 4321480048</span><br><span class="line"></span><br><span class="line"># 查看可变元素的内存地址</span><br><span class="line">In [69]: id(l[2])</span><br><span class="line">Out[69]: 4357841736</span><br><span class="line"></span><br><span class="line">In [70]: id(l1[2])</span><br><span class="line">Out[70]: 4357841736</span><br><span class="line"></span><br><span class="line">In [71]: id(l2[2])</span><br><span class="line">Out[71]: 4357841736</span><br><span class="line"></span><br><span class="line">In [72]: id(l3[2])</span><br><span class="line">Out[72]: 4357841736</span><br><span class="line"># 与python2中一样，只有deepcopy创建了一个新的可变对象</span><br><span class="line">In [73]: id(l4[2])</span><br><span class="line">Out[73]: 4357733832</span><br><span class="line"></span><br><span class="line">修改原列表中的不可变元素</span><br><span class="line">In [79]: l[0] = 10</span><br><span class="line"></span><br><span class="line">In [80]: l</span><br><span class="line">Out[80]: [10, 2, [3, 4], 5]</span><br><span class="line"># 只有赋值操作会跟随改变</span><br><span class="line">In [81]: l1</span><br><span class="line">Out[81]: [10, 2, [3, 4], 5]</span><br><span class="line"></span><br><span class="line">In [82]: l2</span><br><span class="line">Out[82]: [1, 2, [3, 4], 5]</span><br><span class="line"></span><br><span class="line">In [83]: l3</span><br><span class="line">Out[83]: [1, 2, [3, 4], 5]</span><br><span class="line"></span><br><span class="line">In [84]: l4</span><br><span class="line">Out[84]: [1, 2, [3, 4], 5]</span><br><span class="line"></span><br><span class="line"># 原列表和赋值列表中的不可变元素指向了一个新的对象</span><br><span class="line"># 其他三个列表指向原对象</span><br><span class="line">In [85]: id(l[0])</span><br><span class="line">Out[85]: 4321480336</span><br><span class="line"></span><br><span class="line">In [86]: id(l1[0])</span><br><span class="line">Out[86]: 4321480336</span><br><span class="line"></span><br><span class="line">In [87]: id(l2[0])</span><br><span class="line">Out[87]: 4321480048</span><br><span class="line"></span><br><span class="line">In [88]: id(l3[0])</span><br><span class="line">Out[88]: 4321480048</span><br><span class="line"></span><br><span class="line">In [89]: id(l4[0])</span><br><span class="line">Out[89]: 4321480048</span><br><span class="line"></span><br><span class="line">修改原列表中的可变元素</span><br><span class="line">In [90]: l[2][0] = 30</span><br><span class="line"></span><br><span class="line">In [91]: l</span><br><span class="line">Out[91]: [10, 2, [30, 4], 5]</span><br><span class="line"></span><br><span class="line">In [92]: l1</span><br><span class="line">Out[92]: [10, 2, [30, 4], 5]</span><br><span class="line"></span><br><span class="line">In [93]: l2</span><br><span class="line">Out[93]: [1, 2, [30, 4], 5]</span><br><span class="line"></span><br><span class="line">In [94]: l3</span><br><span class="line">Out[94]: [1, 2, [30, 4], 5]</span><br><span class="line"># 与python2中一样，只有deepcopy中的可变对象不跟随改变</span><br><span class="line">In [95]: l4</span><br><span class="line">Out[95]: [1, 2, [3, 4], 5]</span><br></pre></td></tr></table></figure>
 <p>总结，python3中的赋值操作既不是浅拷贝也不是深拷贝，赋值是在原对象上新增一个引用(变量标识符)</p>
 <p>列表的copy方法、浅拷贝和深拷贝都会创建一个新的对象</p>
@@ -419,8 +420,6 @@
 <p>列表的copy方法(2中没有改方法)、浅拷贝和深拷贝中，可变对象中的不可变元素会与原列表共享同一块内存地址，嵌套多层同理</p>
 <p>对于不可变数据类型，深浅拷贝都只是拷贝了引用，对于可变数据类型，深浅拷贝都会创建一个新的对象</p>
 
-          
-        
       
     </div>
     
@@ -437,171 +436,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="hxch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hxch">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T12:51:09+08:00">
-                2018-09-14
-              </time>
+              <a href="/2018/09/14/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -611,10 +467,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -622,6 +479,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -891,6 +752,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
